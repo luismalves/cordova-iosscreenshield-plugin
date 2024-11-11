@@ -64,7 +64,7 @@ class CDVScreenShield: CDVPlugin {
                 }
                 
                 // Deactivate screen recording protection (if needed)
-                //ScreenShield.shared.stopProtection()
+                ScreenShield.shared.removeProtectFromScreenRecording()
                 
                 let pluginResult = CDVPluginResult(status: CDVCommandStatus_OK)
                 self.commandDelegate.send(pluginResult, callbackId: command.callbackId)

@@ -44,6 +44,11 @@ import UIKit
             }
         }
     }
+
+    // Detect screen recording and overlay a blur when active
+    public func removeProtectFromScreenRecording() {
+        deactivateProtection()
+    }
     
     private func hexStringToUIColor(hex: String) -> UIColor? {
         var cleanedHexString = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
