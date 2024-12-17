@@ -40,14 +40,14 @@ extension UIView {
         self.translatesAutoresizingMaskIntoConstraints = false
 
         // Use safeAreaLayoutGuide to avoid overlapping the status bar
-        if #available(iOS 11.0, *) {
-            NSLayoutConstraint.activate([
-                self.topAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.topAnchor),
-                self.bottomAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.bottomAnchor),
-                self.leadingAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.leadingAnchor),
-                self.trailingAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.trailingAnchor)
-            ])
-        } else {
+        // if #available(iOS 11.0, *) {
+        //     NSLayoutConstraint.activate([
+        //         self.topAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.topAnchor),
+        //         self.bottomAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.bottomAnchor),
+        //         self.leadingAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.leadingAnchor),
+        //         self.trailingAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.trailingAnchor)
+        //     ])
+        // } else {
             // Fallback on earlier versions (no safe area, use superview edges)
             NSLayoutConstraint.activate([
                 self.topAnchor.constraint(equalTo: superview.topAnchor),
@@ -55,6 +55,6 @@ extension UIView {
                 self.leadingAnchor.constraint(equalTo: superview.leadingAnchor),
                 self.trailingAnchor.constraint(equalTo: superview.trailingAnchor)
             ])
-        }
+        // }
     }
 }
