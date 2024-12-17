@@ -39,6 +39,8 @@ extension UIView {
     func pinEdges(to superview: UIView) {
         self.translatesAutoresizingMaskIntoConstraints = false
 
+        // Disabled because this breaks the StatusBarOverlaysWebView options from cordova-status-barplugin
+
         // Use safeAreaLayoutGuide to avoid overlapping the status bar
         // if #available(iOS 11.0, *) {
         //     NSLayoutConstraint.activate([
